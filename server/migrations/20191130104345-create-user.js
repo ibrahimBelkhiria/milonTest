@@ -9,29 +9,56 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       customernumber: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       firstname: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
+        validate : {
+          len: [2,150]
+        }
       },
       lastname: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
+        validate : {
+          len: [2,150]
+        }
       },
       username: {
+        allowNull: false,
         type: Sequelize.STRING,
-        unique: true
+        unique: true,
+        validate : {
+         is : /^[^A-Za-z0-9]+$/i
+        }
       },
       email: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
+        validate: {
+          isEmail: true,
+          max: 300
+        }
       },
       dateOfBirth: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       password: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
+        validate : {
+          len: [2,150]
+        }
       },
       repeatPassword: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
+        validate : {
+          len: [2,150]
+        }
       },
       createdAt: {
         allowNull: false,

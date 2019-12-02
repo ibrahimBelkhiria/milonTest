@@ -24,6 +24,18 @@ module.exports = {
       repeatPassword: '12345678',
       createdAt: new Date(),
       updatedAt: new Date()
+    },
+    ,{
+      customernumber: '00003',
+      firstname: 'Simon',
+      lastname: 'Heinz',
+      username: 'SimonH',
+      email: 'Simon@demo.com',
+      dateOfBirth: '25.12.1985',
+      password: '12345678',
+      repeatPassword: '12345678',
+      createdAt: new Date(),
+      updatedAt: new Date()
     }], {});
   },
 
